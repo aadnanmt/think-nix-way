@@ -5,7 +5,7 @@
   imports = [ 
     ./hardware-configuration.nix
     ./modules/apps.nix
-    ./modules/thinkpad.nix
+    # ./modules/thinkpad.nix
     ./modules/niri.nix
   ];
 
@@ -40,4 +40,7 @@
 
   # system version
   system.stateVersion = "24.05";
+
+  # nix settings for nix-command and flakes (required for nh)
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
